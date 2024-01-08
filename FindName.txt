@@ -1,0 +1,94 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Program: FindName
+// Date: 2/23/2023
+// Description: This is a console application designed to search for a specific name in an array of names. It utilizes
+a Scanner for input and defines a method called linear to perform a linear search on the array. The program prompts the 
+user to enter the number of names and then prompts for each name to populate an array. It then prompts the user to enter 
+a name to search for and uses the linear method to find the index of the specified name in the array.
+================================================================================================================
+*/
+
+import java.util.Scanner;
+
+public class FindName
+
+{
+
+	public static void main (String[] args)
+	
+	{
+
+		Scanner input = new Scanner(System.in);
+		int num;
+		String search = "";
+
+		System.out.print("Enter the number of names: ");
+		num = input.nextInt();
+
+		String namesArray[] = new String[num];
+
+		for (int i = 0; i < num; i++) 
+		
+		{
+
+			System.out.print("Enter the names: ");
+			namesArray[i] = input.next();
+
+		}
+
+		System.out.print("Enter the name to search for: ");
+		search = input.next();
+
+		int result = (linear(namesArray, num, search));
+
+		if (result == -1)
+			
+		{
+
+			System.out.print("Name not found");
+
+		}
+		
+		else
+			
+		{
+
+			System.out.print(search + "is present in index at " + result);
+
+		}
+		
+	}
+
+	public static int linear(String namesArray[], int num, String search)
+	
+	{
+
+		for (int i = 0; i < num; i++)
+			
+		{
+
+			if ((namesArray[i]).equals(search))
+				
+			{
+
+				return i;
+
+			}
+
+		}
+
+		return -1;
+
+	}
+
+}
