@@ -1,0 +1,251 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel T.
+// Program: MetricConversion
+// Date: 2/11/2023
+// Description: This is a console application designed to perform metric conversions based on user input. 
+It utilizes a Scanner for input and defines various methods for different metric conversions. The program prompts 
+the user to enter a number and choose a conversion option from the menu, then calls the corresponding method to perform 
+the conversion and display the result.
+================================================================================================================
+ */
+
+import java.util.Scanner;
+
+public class Test 
+
+{
+
+	public static void main (String[] args)
+
+	{
+
+		// Variables
+		Scanner input = new Scanner(System.in);
+		int number;
+		int choice;
+
+		// Display
+		System.out.print("Enter a number: ");
+		number = input.nextInt();
+		System.out.println("Convert: ");
+		System.out.printf("%1s %27s %n", "1. Inches to Centimeters", "5. Centimeters to Inches");
+		System.out.printf("%1s %27s %n", "2. Feet to Centimeters", "6. Centimeters to Feet");
+		System.out.printf("%1s %27s %n", "3. Yards to Meters", "7. Meters to Yards");
+		System.out.printf("%1s %27s %n", "4. Miles to Kilometers", "8. Kilometers to Miles");
+		System.out.println();
+		System.out.print("Enter your choice: ");
+		choice = input.nextInt();
+
+		if (choice == 1)
+
+		{
+
+			inchesToCentimeters(number);
+
+		}
+
+		else if (choice == 2)
+
+		{
+
+			feetToCentimeters(number);
+
+		}
+
+		else if (choice == 3) 
+
+		{
+
+			yardsToMeters(number);
+
+		}
+
+		else if (choice == 4)
+
+		{
+
+			milesToKilometers(number);
+
+		}
+
+		else if (choice == 5)
+
+		{
+
+			centimetersToInches(number);
+
+		}
+
+		else if (choice == 6)
+
+		{
+
+			centimetersToFeet(number);
+
+		}
+
+		else if (choice == 7)
+
+		{
+
+			metersToYards(number);
+
+		}
+
+		else if (choice == 8)
+
+		{
+
+			kilometersToMiles(number);
+
+		}
+
+		else
+
+		{
+
+			System.out.println();
+			System.out.println("Invalid Choice");
+
+		}
+
+	}
+
+	/*
+	 * Converts inches to centimeters
+	 * pre: input a number
+	 * post: Outputs the conversion
+	 */
+	public static double inchesToCentimeters(double number)
+
+	{
+
+		double total;
+		total = number * 2.54;
+		System.out.println(number + " inches is equal to " + total + " centimeters");
+		return total;
+
+	}
+
+	/*
+	 * Converts feet to centimeters
+	 * pre: input a number
+	 * post: Outputs the conversion
+	 */
+	public static double feetToCentimeters(double number)
+
+	{
+
+		double total;
+		total = number * 30.48;
+		System.out.println(number + " feet is equal to " + total + " centimeters");
+		return total;	
+
+	}
+
+	/*
+	 * Converts yards to meters
+	 * pre: input a number
+	 * post: Outputs the conversion
+	 */
+	public static double yardsToMeters(double number)
+
+	{
+
+		double total;
+		total = number * 0.9144;
+		System.out.println(number + " yards is equal to " + total + " meters");
+		return total;	
+
+	}
+
+	/*
+	 * Converts miles to kilometers
+	 * pre: input a number
+	 * post: Outputs the conversion
+	 */
+	public static double milesToKilometers(double number)
+
+	{
+
+		double total;
+		total = number * 1.60934;
+		System.out.println(number + " miles is equal to " + total + " kilometers");
+		return total;		
+
+	}
+
+	/*
+	 * Converts centimeters to inches
+	 * pre: input a number
+	 * post: Outputs the conversion
+	 */
+	public static double centimetersToInches(double number)
+
+	{
+
+		double total;
+		total = number * 0.393701;
+		System.out.println(number + " centimeters is equal to " + total + " inches");
+		return total;	
+
+	}
+
+	/*
+	 * Converts centimeters to feet
+	 * pre: input a number
+	 * post: Outputs the conversion
+	 */
+	public static double centimetersToFeet(double number)
+
+	{
+
+		double total;
+		total = number * 0.0328084;
+		System.out.println(number + " centimeters is equal to " + total + " feet");
+		return total;
+
+	}
+
+	/*
+	 * Converts meters to yards
+	 * pre: input a number
+	 * post: Outputs the conversion
+	 */
+	public static double metersToYards(double number)
+
+	{
+
+		double total;
+		total = number * 1.09361;
+		System.out.println(number + " meters is equal to " + total + " yards");
+		return total;
+
+	}
+
+	/*
+	 * Converts kilometers to miles
+	 * pre: input a number
+	 * post: Outputs the conversion
+	 */
+	public static double kilometersToMiles(double number)
+
+	{
+
+		double total;
+		total = number * 0.621371;
+		System.out.println(number + " kilometers is equal to " + total + " miles");
+		return total;	
+
+	}
+
+}
