@@ -1,0 +1,58 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Program: CountVowels
+// Date: 2/14/2023
+// Description: This is a console application designed to count the number of vowels in a given input text. It uses
+ a Scanner for input and includes a loop to iterate through each character in the input text, incrementing a counter
+ whenever a vowel (a, e, i, o, u) is encountered. The program outputs the original text in lowercase and the count of
+ vowels in that text. 
+================================================================================================================
+ */
+
+import java.util.Scanner;
+
+public class CountVowels 
+
+{
+
+	public static void main (String [] args) 
+	
+	{
+		
+		// Variables
+		Scanner input = new Scanner(System.in);
+		String word;
+		int count = 0;
+		
+		System.out.println("Enter text: ");
+		word = input.nextLine();
+		word = word.toLowerCase();
+		
+		for (int i = 0; i < word.length(); i++)
+		
+		{
+		
+			if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o' || word.charAt(i) == 'u') 
+			
+			{
+				
+				count++;
+				
+			}
+			
+		}
+		
+		System.out.println("The number of vowels in: " + word + " is " + count);
+		
+	}
+	
+}
