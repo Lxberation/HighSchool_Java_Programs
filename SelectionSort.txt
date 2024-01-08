@@ -1,0 +1,97 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Application: SelectionSort
+// Date: 1/8/2024
+// Description: Selection Sort is a simple sorting algorithm that works by repeatedly finding the minimum element 
+from the unsorted part of the array and putting it at the beginning. The process is iteratively applied to the 
+remaining unsorted elements until the entire array is sorted. The algorithm divides the input array into two 
+parts: the sorted and the unsorted subarrays. In each iteration, the smallest element from the unsorted subarray 
+is selected and swapped with the first element of the unsorted subarray.
+================================================================================================================
+*/
+
+public class SelectionSort 
+
+{
+
+    public static void main(String[] args) 
+	
+	{
+	
+        int[] array = {64, 25, 12, 22, 11};
+        
+        System.out.println("Original Array:");
+        printArray(array);
+        
+        selectionSort(array);
+        
+        System.out.println("\nSorted Array:");
+        printArray(array);
+		
+    }
+
+    // Selection Sort algorithm
+    static void selectionSort(int[] arr) 
+	
+	{
+	
+        int n = arr.length;
+
+        // One by one move the boundary of the unsorted subarray
+        for (int i = 0; i < n - 1; i++) 
+		
+		{
+		
+            // Find the minimum element in the unsorted array
+            int minIndex = i;
+			
+            for (int j = i + 1; j < n; j++) 
+			
+			{
+			
+                if (arr[j] < arr[minIndex]) 
+				
+				{
+				
+                    minIndex = j;
+					
+                }
+				
+            }
+
+            // Swap the found minimum element with the first element
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+			
+        }
+		
+    }
+
+    // Utility method to print an array
+    static void printArray(int[] arr) 
+	
+	{
+	
+        for (int i = 0; i < arr.length; i++) 
+		
+		{
+		
+            System.out.print(arr[i] + " ");
+			
+        }
+		
+        System.out.println();
+		
+    }
+	
+}
