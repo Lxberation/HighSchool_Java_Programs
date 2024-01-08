@@ -1,0 +1,87 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Application: InsertionSort
+// Date: 1/8/2024
+// Description: Insertion Sort is a simple sorting algorithm that builds the final sorted array one element at a time. 
+It repeatedly takes an element from the unsorted part of the array and inserts it into its correct position within the 
+sorted part of the array. This process is repeated until the entire array is sorted. The algorithm is called "insertion sort" 
+because it involves inserting elements into their proper place in the sorted sequence. It is a straightforward and 
+easy-to-understand sorting algorithm but may not be the most efficient for large datasets.
+================================================================================================================
+*/
+
+public class Test 
+
+{
+
+    public static void main(String[] args) 
+	
+	{
+	
+        int[] array = {12, 11, 13, 5, 6};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        insertionSort(array);
+
+        System.out.println("\nSorted Array:");
+        printArray(array);
+		
+    }
+
+    static void insertionSort(int[] array) 
+	
+	{
+	
+        int n = array.length;
+
+        for (int i = 1; i < n; ++i) 
+		
+		{
+		
+            int key = array[i];
+            int j = i - 1;
+
+            // Move elements of array[0..i-1] that are greater than key to one position ahead of their current position
+            while (j >= 0 && array[j] > key) 
+			
+			{
+			
+                array[j + 1] = array[j];
+                j = j - 1;
+				
+            }
+			
+            array[j + 1] = key;
+			
+        }
+		
+    }
+
+    static void printArray(int[] array) 
+	
+	{
+	
+        for (int i = 0; i < array.length; i++) 
+		
+		{
+		
+             System.out.print(array[i] + " ");
+			
+        }
+		
+        System.out.println();
+		
+    }
+	
+}
