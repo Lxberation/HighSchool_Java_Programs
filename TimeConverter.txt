@@ -1,0 +1,148 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Project: TimeConverter
+// Date: 2/6/2023
+// Description: is a console application designed to perform different time unit conversions. It includes methods 
+for converting hours to minutes, days to hours, minutes to hours, and hours to days. The program utilizes a Scanner 
+for user input and prompts the user to select a type of time conversion.
+================================================================================================================
+*/
+
+import java.util.Scanner;
+
+public class TimeConverter 
+
+{
+
+	public static void hoursToMinutes() 
+	
+	{
+	
+		double hours;
+		double minutes;
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter hours: ");
+		hours = input.nextDouble();
+		input.close();
+
+		minutes = hours * 60;
+		System.out.println(hours + " hours is equal to " + minutes + " minutes");
+		
+	}
+
+	public static void daysToHours() 
+	
+	{
+	
+		double days;
+		double hours;
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter days: ");
+		days = input.nextDouble();
+		input.close();
+
+		hours = days * 24;
+		System.out.println(days + " days is equal to " + hours + " hours");
+
+	}
+
+	public static void minutesToHours() 
+	
+	{
+	
+		double minutes;
+		double hours;
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter minutes: ");
+		minutes = input.nextDouble();
+		input.close();
+
+		hours = minutes / 60;
+		System.out.println(minutes + " minutes is equal to " + hours + " hours");
+
+	}
+
+	public static void hoursToDays() 
+	
+	{
+	
+		double hours;
+		double days;
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter hours: ");
+		hours = input.nextDouble();
+		input.close();
+
+		days = hours / 24;
+		System.out.println(hours + " hours is equal to " + days + " days");
+		
+	}
+
+	public static void main(String[] args) 
+	
+	{
+	
+		int choice;
+		Scanner input = new Scanner(System.in);
+
+		// Ask user for type of conversion
+		System.out.println("1. Hours to minutes conversion");
+		System.out.println("2. Days to hours conversion");
+		System.out.println("3. Minutes to hours conversion");
+		System.out.println("4. Hours to days conversion");
+		System.out.println();
+		System.out.print("Enter your choice: ");
+		choice = input.nextInt();
+
+		// Conversions
+		if (choice == 1) 
+		
+		{
+		
+			hoursToMinutes();
+			
+		} 
+		
+		else if (choice == 2) 
+		
+		{
+		
+			daysToHours();
+			
+		} 
+		
+		else if (choice == 3) 
+		
+		{
+		
+			minutesToHours();
+			
+		} 
+		
+		else 
+		
+		{
+		
+			hoursToDays();
+			
+		}
+		
+		input.close();
+		
+	}
+	
+}
