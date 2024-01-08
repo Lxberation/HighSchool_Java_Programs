@@ -1,0 +1,82 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Application: BinarySearch
+// Date: 1/8/2024
+// Description: Linear search, also known as sequential search, is a simple method for finding a target element in a list. 
+It involves iterating through each element in the list, one by one, until the target element is found or the end of the 
+list is reached. The algorithm checks each element in order, comparing it with the target. If a match is found, the 
+algorithm returns the index of the target element in the list; otherwise, it returns a signal, often -1, indicating that 
+the target element is not present in the list. Linear search is straightforward but may not be efficient for large datasets 
+compared to more advanced search algorithms.
+================================================================================================================
+ */
+
+public class LinearSearchExample 
+
+{
+
+    public static void main(String[] args) 
+	
+	{
+	
+        // Sample array
+        int[] array = {4, 2, 7, 1, 9, 5, 8};
+
+        // Element to search for
+        int target = 5;
+
+        // Perform linear search
+        int index = linearSearch(array, target);
+
+        // Display the result
+        if (index != -1) 
+		
+		{
+		
+            System.out.println("Element " + target + " found at index " + index);
+			
+        } 
+		
+		else 
+		
+		{
+		
+            System.out.println("Element " + target + " not found in the array");
+			
+        }
+		
+    }
+
+    // Linear search function
+    public static int linearSearch(int[] array, int target) 
+	
+	{
+	
+        for (int i = 0; i < array.length; i++) 
+		
+		{
+		
+            if (array[i] == target) 
+			
+			{
+			
+                return i; // Element found, return its index
+				
+            }
+			
+        }
+		
+        return -1; // Element not found
+		
+    }
+	
+}
