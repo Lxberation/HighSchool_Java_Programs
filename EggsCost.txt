@@ -1,0 +1,58 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Application: EggsCost
+// Date: 2/3/2023
+// Description: is a console application designed to calculate the cost of eggs based on the quantity purchased. 
+It uses a Scanner for input and includes a NumberFormat instance for formatting currency. The program prompts the 
+user to enter the number of eggs purchased and calculates the total cost based on the specified pricing tiers. 
+The cost per egg is determined by the quantity purchased, with different rates for different ranges of quantities.
+The program then outputs the total cost in currency format.
+================================================================================================================
+ */
+
+import java.util.Scanner;
+import java.text.NumberFormat;
+
+public class Eggs {
+
+public static void main (String [] args) {
+
+	Scanner input = new Scanner(System.in);
+	NumberFormat money = NumberFormat.getCurrencyInstance();
+	
+	// Variables
+	int eggs;
+	double eggCost;
+	double totalCost;
+	
+	System.out.print("Enter the number of eggs purchased: ");
+	eggs = input.nextInt();
+	
+	if (eggs < 48) {
+		eggCost = 0.50 / 12;
+	}
+	else if (eggs < 72) {
+	eggCost = 0.45 / 12;
+	}
+	else if (eggs < 132) {
+	eggCost = 0.40 / 12;
+	}
+	else {
+	eggCost = 0.35 / 12;
+	}
+	
+	totalCost = eggs * eggCost
+	
+	System.out.println("The bill is equal to: " + money.format(totalCost);
+	
+	}
+}
