@@ -11,7 +11,7 @@
 // Programmer: Daniel T.
 // Program: Monogram
 // Date: 2/14/2023
-// Description: is a console application designed to generate a monogram based on the user's first, middle, and last names. 
+// Description: This is a console application designed to generate a monogram based on the user's first, middle, and last names. 
  * It utilizes a Scanner for input and prompts the user to enter their first, middle, and last names. The program then 
  * extracts the first letter of the first and middle names in lowercase and the first letter of the last name in uppercase. 
  * Finally, it prints the generated monogram.
