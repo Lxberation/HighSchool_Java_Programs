@@ -1,0 +1,51 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel T.
+// Program: Monogram
+// Date: 2/14/2023
+// Description: is a console application designed to generate a monogram based on the user's first, middle, and last names. 
+ * It utilizes a Scanner for input and prompts the user to enter their first, middle, and last names. The program then 
+ * extracts the first letter of the first and middle names in lowercase and the first letter of the last name in uppercase. 
+ * Finally, it prints the generated monogram.
+ */
+================================================================================================================
+*/
+
+import java.util.Scanner;
+
+public class Monogram
+
+{
+
+	public static void main (String [] args) 
+
+	{
+
+		// Variables
+		Scanner input = new Scanner (System.in);
+		String firstName;
+		String middleName;
+		String lastName;
+
+		// Prompt
+		System.out.print("Enter your first name: ");
+		firstName = input.nextLine();
+		System.out.print("Enter your middle name: ");
+		middleName = input.nextLine();
+		System.out.print("Enter your last name: ");
+		lastName = input.nextLine();
+
+		// Output
+		System.out.println("Your monogram is: " + firstName.toLowerCase().charAt(0) + middleName.toLowerCase().charAt(0) + lastName.toUpperCase().charAt(0));
+
+	}
+
+}
