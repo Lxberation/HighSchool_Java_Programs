@@ -1,0 +1,78 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Program: FormalGreeting
+// Date: 2/13/2023
+// Description: is a console application designed to generate a formal greeting based on the provided name and title. 
+It uses a Scanner for input and compares the entered title with predefined titles ("Mr," "Mrs," "Ms," "Miss") using the 
+'compareToIgnoreCase' method. The program then outputs a different greeting message based on the title.
+================================================================================================================
+*/
+
+import java.util.Scanner;
+
+public class FormalGreeting
+
+{
+
+	public static void main (String [] args) 
+
+	{
+
+		// Variables
+		String name;
+		String title;
+		String title1 = "Mr";
+		String title2 = "Mrs";
+		String title3 = "Ms";
+		String title4 = "Miss";
+
+
+		Scanner input = new Scanner(System.in);
+		System.out.print("Name: ");
+		name = input.nextLine();
+		System.out.print("Enter title: ");
+		title = input.nextLine();
+
+		if (title.compareToIgnoreCase(title1) == 0) 
+			
+		{
+			
+			System.out.println("Hello sir");
+			
+		}
+		
+		else if (title.compareToIgnoreCase(title2) == 0) {
+			System.out.println("Hello ma'am");
+			
+		}
+
+		else if (title.compareToIgnoreCase(title3) == 0) {
+			System.out.println("Hello ma'am");
+			
+		}
+
+		else if (title.compareToIgnoreCase(title4) == 0) {
+			System.out.println("Hello ma'am");
+			
+		}
+
+		else 
+			
+		{
+			
+			System.out.println("Hello " + name);
+
+		}
+
+	}
+
+}
