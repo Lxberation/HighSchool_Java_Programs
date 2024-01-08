@@ -1,0 +1,96 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae T.
+// Application: BinarySearch
+// Date: 1/8/2024
+// Description: Binary search is an efficient algorithm used to find a specific value in a sorted array. It works by 
+repeatedly dividing the search interval in half. The process starts with the entire sorted array, and in each step, 
+it compares the middle element with the target value. If the middle element is equal to the target, the search is successful. 
+If the middle element is less than the target, the search continues in the right half of the array; if it's greater, 
+the search continues in the left half. This process is repeated until the target is found or the search interval becomes empty. 
+Binary search is significantly faster than linear search for large datasets because it eliminates half of the remaining 
+elements in each step.
+================================================================================================================
+ */
+
+public class BinarySearch {
+
+    public static void main(String[] args) 
+    
+    {
+	
+        int[] sortedArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int target = 6;
+
+        int result = binarySearch(sortedArray, target);
+
+        if (result != -1) 
+		
+		{
+		
+            System.out.println("Element " + target + " found at index " + result);
+			
+        } 
+		
+		else 
+		
+		{
+		
+            System.out.println("Element " + target + " not found in the array");
+			
+        }
+		
+    }
+	
+	    public static int binarySearch(int[] array, int target) 
+	    
+	    {
+	
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left <= right) 
+		
+		{
+		
+            int mid = left + (right - left) / 2;
+
+            if (array[mid] == target) 
+			
+			{
+			
+                return mid; // Target found
+				
+            } 
+			
+			else if (array[mid] < target) 
+			
+			{
+			
+                left = mid + 1; // Search in the right half
+				
+            } 
+			
+			else 
+			
+			{
+			
+                right = mid - 1; // Search in the left half
+				
+            }
+			
+        }
+
+        return -1; // Target not found
+		
+    }
+	
+}
