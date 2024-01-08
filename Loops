@@ -1,0 +1,299 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+Java Loops / While Loops / Do While Loops / For Loops
+================================================================================================================
+ */
+
+public class Loops {
+
+	public static void main(String[] args) 
+
+	{
+
+		// 1) Using a while loop counting from 1 to 5 (Starting your loop count at 0)
+		System.out.println(" 1) Using a while loop counting from 1 to 5 (Starting your loop cnt with 0) ");
+		int cnt = 0;
+
+		while (cnt < 5) 
+
+		{
+
+			cnt ++;
+			System.out.println(cnt);
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 2) Using a while loop count from 5 to 1
+		System.out.println(" 2) Using a while loop count from 5 to 1 ");
+		cnt = 5;
+
+		while (cnt > 0) 
+
+		{
+
+			System.out.println(cnt);
+			cnt--;
+
+		}
+		System.out.println(" ======================================================================================== ");
+
+		// 3) Using a Do while loop count from 1 to 5
+		System.out.println(" 3) Using a Do while loop count from 1 to 5 ");
+		cnt = 0;
+
+		do 
+
+		{
+
+			cnt++;
+			System.out.println(cnt);
+
+		}
+
+		while (cnt < 5);
+
+		System.out.println(" ======================================================================================== ");
+
+		// 4) Using a Do while loop count backwards from 5 to 1
+		System.out.println(" 4) Using a Do while loop count backwards from 5 to 1 ");
+		cnt = 5;
+
+		do 
+
+		{
+
+			System.out.println(cnt);
+			cnt--;
+
+		}
+
+		while (cnt > 0 );
+
+		System.out.println(" ======================================================================================== ");
+
+		// 5) Using a For loop count 1 to 5 but start i at 0
+		System.out.println(" 5) Using a For loop count 1 to 5 but start i at 0 ");
+
+		for (int i = 0; i < 5; i++) 
+
+		{
+
+			System.out.println(i + 1);
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 6) Using  a For loop count 5 to 1 (use i)
+		System.out.println(" 6) Using  a For loop count 5 to 1 (use i) ");
+
+		for (int i = 5; i > 0; i--) 
+
+		{
+
+			System.out.println(i);
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 7) Using a For Loop from 2 to 10 by 2
+		System.out.println(" 7) Using a For Loop from 2 to 10 by 2 ");
+
+		for (int i = 2; i <= 10; i += 2) 
+
+		{
+
+			System.out.println(i);
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 8) Using a while loop from 5 to 40 by 5
+		System.out.println(" 8) Using a while loop from 5 to 40 by 5 ");
+		cnt = 5;
+
+		while (cnt <= 40) 
+
+		{
+
+			System.out.println(cnt);
+			cnt += 5;
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 9) Nested loop just printing values 1 to 6
+		System.out.println(" 9) Nested loop just printing values 1 to 6 ");
+
+		for (int i = 0; i < 3; i++) 
+
+		{
+
+			for (int j = 0; j < 2; j++) 
+
+			{
+
+				System.out.println(i + "+" + j);
+
+			}
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 10) Create the following output using 2 For Loops (A loop in a loop) use J for the other variable
+		/*
+		 *  
+		 * 		1 2 3 4 5 6 
+		 * 		1 2 3 4 5 6
+		 * 		1 2 3 4 5 6 
+		 * 		1 2 3 4 5 6 
+		 * 
+		 */
+
+		System.out.println(" 10) Create the following output using 2 For Loops (A loop in a loop) use J for the other variable ");
+
+		for (int i = 0; i < 4; i++) 
+
+		{
+
+			System.out.print(" ---> ");	
+			for (int j = 0; j < 5; j++) 
+
+			{
+
+				System.out.print((j+1) + " ");
+
+			}
+
+			System.out.println();
+
+		}	
+
+		System.out.println(" ======================================================================================== ");
+
+		// 11) Create the following image
+		/*
+		 * 		A
+		 * 		AA
+		 * 		AAA
+		 * 		AAAA
+		 * 		AAAAA
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+
+		System.out.println(" 11) Create the following image ");
+
+		for (int i = 0; i < 5; i++) 
+
+		{
+
+			for (int j = 0; j <= i; j++) 
+
+			{
+
+				System.out.print(" ");
+
+			}
+
+			for (int j = 0; j < i; j++) 
+
+			{
+
+				System.out.print("A");
+
+			}
+
+			System.out.println();
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 11b) Create the following image
+		/*
+		 * 	   		A
+		 *    	   AA
+		 *   	  AAA
+		 *  	 AAAA
+		 *		AAAAA
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+
+		System.out.println(" 11b) Create the following image ");
+		int col = 5;
+
+		for (int i = 0; i < col; i++) 
+
+		{
+
+			for (int j = col - i; j > 0; j--) 
+			{
+
+				System.out.print(" ");
+
+			}
+
+			for (int j = 0; j < i; j++) {
+				System.out.print("A");
+
+			}
+
+			System.out.println();
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 12) Write a For loop to count from 3 to 15 by 3
+		System.out.println(" 12) Write a For loop to count from 3 to 15 by 3 ");
+
+		for (int i = 3; i <= 15; i += 3) 
+
+		{
+
+			System.out.println(i);
+
+		}
+
+		System.out.println(" ======================================================================================== ");
+
+		// 13) Write a DO while loop to count from 22 to 2 by 4s
+		System.out.println(" 13) Write a DO while loop to count from 22 to 2 by 4s ");
+		cnt = 26;
+
+		do 
+
+		{
+
+			cnt -= 4;
+			System.out.println(cnt);
+
+		} 
+
+		while (cnt > 2);
+
+		System.out.println(" ======================================================================================== ");
+
+	}
+
+}
