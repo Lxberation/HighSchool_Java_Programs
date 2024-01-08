@@ -7,11 +7,11 @@
 ##	88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88
 ##	88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88
 ##	================================================================================================================
-##	// Programmer: Daniel Rae Tiangco
-##  // Student ID: 0804165
-##	// Project: Lab 0
-##	// Date: 1/8/2024
-##	// Description: The program prints "Hello World!"
+##	Programmer: Daniel Rae Tiangco
+##  Student ID: 0804165
+##	Project: Lab 0
+##	Date: 1/8/2024
+##	Description: The program prints "Hello World!"
 ##	================================================================================================================
 
 print ("Hello World!")
