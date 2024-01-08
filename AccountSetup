@@ -11,6 +11,10 @@
 // Programmer: Daniel T.
 // Application: AccountSetup
 // Date: 2/10/2023
+// Description: This program is a simple console application designed to prompt the user to input 
+a username  and password. It utilizes the Scanner class for input handling. The program ensures that the password provided 
+by the user is at least 8 characters long. If the initial password entered is not compliant, the user is prompted again 
+until a valid password is provided. Finally, the program displays the entered username in lowercase and the password.
 ================================================================================================================
  */
 
