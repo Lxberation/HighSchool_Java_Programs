@@ -1,0 +1,54 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel T.
+// Program: PizzaCost
+// Date: 2/3/2023
+// Description: This is a console application designed to calculate the total cost of a pizza based on user input 
+for the pizza size (diameter). It uses a Scanner for input and defines various cost factors, such as labor cost, rent cost, and material cost. 
+The program prompts the user to enter the diameter of the pizza in inches, and then it calculates the material cost based on the square of the 
+diameter. Finally, it computes the total cost of the pizza by adding up the material cost, rent cost, and labor cost, and prints the result.
+================================================================================================================
+ */
+
+import java.util.Scanner;
+
+public class PizzaCost 
+
+{
+	
+   public static void main(String[] args) 
+   
+   {
+	   
+	   // Variables
+	   Scanner input = new Scanner(System.in);
+	   double labourCost = 0.75;
+	   int rentCost = 1;
+	   double materialCost = 0.05;
+	   double pizzaTotal;
+	   double diameter0;
+   
+	   // Pizza Size
+	   System.out.println("How big do you want your pizza to be in inches?");
+	   diameter0 = input.nextInt();
+   
+	   // Calculating the Diameter
+	   diameter0 = (double) diameter0 * diameter0 * materialCost;
+   
+	   // Total Cost of Pizza
+	   pizzaTotal = (diameter0 + (double)rentCost + labourCost);
+   
+	   // Total Price
+	   System.out.println("The total cost for your order is: $" + pizzaTotal);
+	   
+   }
+   
+}
